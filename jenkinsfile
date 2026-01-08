@@ -39,7 +39,7 @@ pipeline {
 
        stage('Deploy to Kubernetes') {
     steps {
-            withEnv(["KUBECONFIG=C:\\Users\\YourUser\\.kube\\config"]) {
+            withEnv(["KUBECONFIG=C:\\Users\\Jayesh\\.kube\\config"]) {
                 bat 'kubectl apply -f k8s/deployment.yaml'
             }
         }

@@ -42,7 +42,6 @@ pipeline {
                 withEnv(["KUBECONFIG=C:\\Users\\Jayesh\\.kube\\config"]) {
                     bat 'kubectl apply -f k8s/deployment.yaml'
                     bat 'kubectl apply -f k8s/service.yaml'
-                    bat 'kubectl rollout status deployment/nodejs-cicd --timeout=60s'
                 }
             }
         }

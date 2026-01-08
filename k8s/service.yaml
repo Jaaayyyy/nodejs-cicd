@@ -1,11 +1,12 @@
-apiVersion: v2
+apiVersion: v1
 kind: Service
 metadata:
-  name: node-service
+  name: nodejs-cicd-service
 spec:
   selector:
-    app: node
+    app: nodejs-cicd
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 3000
   type: NodePort

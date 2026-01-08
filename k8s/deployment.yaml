@@ -1,19 +1,21 @@
-apiVersion: apps/v2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodejs-cicd
+  labels:
+    app: nodejs-cicd
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: node
+      app: nodejs-cicd
   template:
     metadata:
       labels:
-        app: node
+        app: nodejs-cicd
     spec:
       containers:
-      - name: node
-        image: jayeshmdocker/nodejs-cicd:v2
+      - name: nodejs-cicd
+        image: your-docker-image:latest
         ports:
         - containerPort: 3000

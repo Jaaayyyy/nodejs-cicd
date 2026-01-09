@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodejs-cicd
-        image: your-docker-image:latest
+        image: jayeshmdocker/cicd-nodejs:latest
         ports:
         - containerPort: 3000
